@@ -1,0 +1,29 @@
+.page-footer__address {
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+
+  margin-bottom: 60px;
+}
+
+.address__text {
+  margin-top: 0;
+  margin-bottom: 9px;
+
+  color: $bg-color-white;
+}
+
+.address__link {
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: $accent-main-color;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}

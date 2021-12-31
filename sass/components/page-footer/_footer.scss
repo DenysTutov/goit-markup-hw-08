@@ -1,0 +1,21 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $bg-footer;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      white-space: nowrap;
+    }
+  }
+}
+
+.page-footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}

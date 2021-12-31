@@ -1,0 +1,86 @@
+.portfolio__project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -15px;
+}
+
+.project__card {
+  margin: 15px;
+  width: calc((100% - 90px) / 3);
+  background-color: $bg-color-white;
+}
+
+.project__img {
+  display: block;
+}
+
+.project__link {
+  text-decoration: none;
+  display: block;
+
+  transition: box-shadow 250ms $bezier-timing;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.project__card-gap {
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.project__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: $main-text-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project__sub-title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $secondary-text-color;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+// Project thumb
+.project__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__thumb-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $bg-color-white;
+
+  transform: translateY(100%);
+  transition: transform 250ms $bezier-timing;
+
+  .project__link:hover &,
+  .project__link:focus & {
+    transform: translateY(0);
+  }
+}

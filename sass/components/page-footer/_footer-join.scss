@@ -1,0 +1,25 @@
+.page-footer__join {
+  margin-bottom: 60px;
+}
+
+.join__title {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $bg-color-white;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+// Socials links modifier
+.socials-list__link--bg-black {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socials-list__icon--white {
+  fill: $bg-color-white;
+}

@@ -1,0 +1,19 @@
+.logo {
+  text-decoration: none;
+  color: $main-text-color;
+
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: $accent-main-color;
+
+  &--black {
+    color: $main-text-color;
+  }
+
+  &--white {
+    color: $bg-color-white;
+  }
+}

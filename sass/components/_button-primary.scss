@@ -1,0 +1,16 @@
+%button-primary {
+  background-color: $accent-main-color;
+  color: $bg-color-white;
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0px solid transparent;
+}

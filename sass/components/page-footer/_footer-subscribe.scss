@@ -1,0 +1,92 @@
+.subscribe__title {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $bg-color-white;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.subscribe__form {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.subscribe__label {
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    margin-right: 12px;
+  }
+}
+
+.subscribe__fild {
+  height: 50px;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
+}
+
+.subscribe__button {
+  @extend %button-primary;
+
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+  padding: 10px 29px;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: background-color 250ms $bezier-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-secondary-color;
+  }
+
+  &::after {
+    content: "";
+
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+
+    background-image: url(../../../images/icon-send.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

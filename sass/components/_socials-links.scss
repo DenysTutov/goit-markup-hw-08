@@ -1,0 +1,38 @@
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.socials-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color 250ms $bezier-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-main-color;
+  }
+}
+
+.socials-list__icon {
+  width: 20px;
+  height: 20px;
+
+  fill: $socials-icon-color;
+
+  transition: fill 250ms $bezier-timing;
+
+  .socials-list__link:hover &,
+  .socials-list__link:focus & {
+    fill: $bg-color-white;
+  }
+}

@@ -1,0 +1,66 @@
+.hero {
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../../../images/bg-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #2f303a;
+
+  display: flex;
+  align-items: center;
+
+  text-align: center;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+  }
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: $bg-color-white;
+  font-family: $main-font;
+  font-size: 26px;
+  line-height: 1.62;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero__button {
+  @extend %button-primary;
+
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+
+  transition: background-color 250ms $bezier-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-secondary-color;
+  }
+}

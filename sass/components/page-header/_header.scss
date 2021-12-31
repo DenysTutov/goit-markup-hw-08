@@ -1,0 +1,12 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+
+  &--flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+  margin-right: 93px;
+}
