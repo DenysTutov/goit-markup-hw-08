@@ -15,10 +15,11 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="page-header visually-hidden">
+  <header class="page-header">
     <div class="container page-header--flex">
       <a href="./index.html" class="logo page-header__logo">Web<span class="logo--black">Studio</span></a>
-      <div>
+
+      <div class="page-header__nav-container">
         <nav class="page-header__nav">
           <ul class="nav__list">
             <li class="nav__item"><a href="./index.html" class="nav__link nav__link--current">Студия</a></li>
@@ -44,6 +45,40 @@
           </li>
         </ul>
       </div>
+
+      
+      <button type="button" class="mobile-menu__button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use class="mobile-menu__menu-icon" href="./images/icons.svg#mobile-menu"></use>
+          <use class="mobile-menu__cross-icon" href="./images/icons.svg#mobile-cross"></use>
+        </svg>
+      </button>
+      
+      <div class="mobile-menu__menu-container" id="menu-container" data-menu>
+        <ul class="mobile-menu__nav-list">
+          <li class="mobile-menu__nav-item"><a href="./index.html" class="mobile-menu__nav-link">Студия</a></li>
+          <li class="mobile-menu__nav-item"><a href="./portfolio.html" class="mobile-menu__nav-link">Портфолио</a></li>
+          <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Контакты</a></li>
+        </ul>
+      
+        <div>
+          <ul class="mobile-menu__contacts-list">
+            <li class="mobile-menu__contacts-item"><a href="tel:+380961111111" class="mobile-menu__contacts-tel">+38 096 111
+                11
+                11</a></li>
+            <li class="mobile-menu__contacts-item"><a href="mailto:info@devstudio.com"
+                class="mobile-menu__contacts-mail">info@devstudio.com</a></li>
+          </ul>
+      
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials_item"><a href="#" class="mobile-menu__socials-link">Instagram</a></li>
+            <li class="mobile-menu__socials_item"><a href="#" class="mobile-menu__socials-link">Twitter</a></li>
+            <li class="mobile-menu__socials_item"><a href="#" class="mobile-menu__socials-link">Facebook</a></li>
+            <li class="mobile-menu__socials_item"><a href="#" class="mobile-menu__socials-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      
     </div>  
   </header>
 
@@ -355,53 +390,55 @@
   <!-- Footer -->
   <footer class="page-footer">
     <div class="container page-footer--flex">
-      <div class="page-footer__contacts">
-        <a href="./index.html" class="logo page-footer__logo">Web<span class="logo--white">Studio</span></a>
+      <div class="page-footer__container-tablet">
+        <div class="page-footer__contacts">
+          <a href="./index.html" class="logo page-footer__logo">Web<span class="logo--white">Studio</span></a>
         
-        <address class="page-footer__address">
-          <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-          <a href="mailto:info@example.com" class="address__link">info@example.com</a>
-          <a href="tel:+380991111111" class="address__link">+38 099 111 11 11</a>
-        </address>
-      </div>
-
-      <div class="page-footer__join">
-        <b class="join__title">Присоединяйтесь</b>
+          <address class="page-footer__address">
+            <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+            <a href="mailto:info@example.com" class="address__link">info@example.com</a>
+            <a href="tel:+380991111111" class="address__link">+38 099 111 11 11</a>
+          </address>
+        </div>
         
-        <ul class="socials-list">
-          <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Instagram">
-              <svg class="socials-list__icon socials-list__icon--white">
-                <use href="./images/icons.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
+        <div class="page-footer__join">
+          <b class="join__title">Присоединяйтесь</b>
         
-          <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Twitter">
-              <svg class="socials-list__icon socials-list__icon--white">
-                <use href="./images/icons.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
+          <ul class="socials-list">
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Instagram">
+                <svg class="socials-list__icon socials-list__icon--white">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
         
-          <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Facebook">
-              <svg class="socials-list__icon socials-list__icon--white">
-                <use href="./images/icons.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Twitter">
+                <svg class="socials-list__icon socials-list__icon--white">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
         
-          <li class="socials-list__item">
-            <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Linkedin">
-              <svg class="socials-list__icon socials-list__icon--white">
-                <use href="./images/icons.svg#linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Facebook">
+                <svg class="socials-list__icon socials-list__icon--white">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
         
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link socials-list__link--bg-black" aria-label="Linkedin">
+                <svg class="socials-list__icon socials-list__icon--white">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        
+        </div>
       </div>
       
       <div class="page-footer__subscribe">
@@ -476,7 +513,7 @@
           <svg class="checkbox__icon" width="16" height="15">
             <use href="./images/icons.svg#checkbox"></use>
           </svg>
-          <span>Соглашаюсь с рассылкой и принимаю&nbsp;</span><a href="#" class="checkbox__accepted-link">Условия договора</a>
+          <span class="checkbox__accepted-text">Соглашаюсь с рассылкой и принимаю&nbsp;</span><a href="#" class="checkbox__accepted-link">Условия договора</a>
         </label>
 
         <button type="submit" class="modal__submit">Отправить</button>
@@ -485,5 +522,6 @@
   </div>
 
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

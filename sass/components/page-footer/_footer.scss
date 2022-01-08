@@ -19,3 +19,18 @@
   display: block;
   margin-bottom: 20px;
 }
+
+.page-footer__container-tablet {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+}

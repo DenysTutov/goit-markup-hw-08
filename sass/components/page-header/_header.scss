@@ -1,12 +1,24 @@
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
+  height: 60px;
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
 
   &--flex {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
   }
 }
 
 .page-header__logo {
-  margin-right: 93px;
+  margin-right: 88px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 }

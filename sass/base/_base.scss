@@ -1,0 +1,11 @@
+body {
+  @include base-font(14px, 400, 16px, 0.03em);
+}
+
+body.modal-open {
+  overflow: hidden;
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 17px;
+  }
+}

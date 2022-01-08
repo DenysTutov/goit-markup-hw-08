@@ -104,9 +104,13 @@
   }
 }
 
+// Chexbox
 .modal__checkbox {
   margin-top: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .checkbox__icon {
@@ -124,12 +128,29 @@
   }
 }
 
+.checkbox__accepted-text {
+  @include base-font(12px, 400, 14px, 0.03em);
+  color: $secondary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    @include base-font(14px, 400, 24px, 0.03em);
+    color: $secondary-text-color;
+  }
+}
+
 .checkbox__accepted-link {
+  @include base-font(12px, 400, 14px, 0.03em);
   color: $accent-main-color;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+
+  @media screen and (min-width: $desktop) {
+    @include base-font(14px, 400, 24px, 0.03em);
+    color: $accent-main-color;
+  }
 }
 
+// Button submit
 .modal__submit {
   @extend %button-primary;
   height: 50px;

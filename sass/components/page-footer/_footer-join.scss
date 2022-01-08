@@ -1,13 +1,13 @@
 .page-footer__join {
-  margin-bottom: 60px;
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin-bottom: 60px;
+  }
 }
 
 .join__title {
   display: block;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+
+  @include base-font(14px, 700, 16px, 0.03em);
   text-transform: uppercase;
 
   color: $bg-color-white;

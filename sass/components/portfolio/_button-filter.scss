@@ -1,11 +1,30 @@
 .portfolio__button-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.portfolio__button-item:not(:last-child) {
-  margin-right: 8px;
+.portfolio__button-item {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin: 8px 4px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
 }
 
 .portfolio__button {

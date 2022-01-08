@@ -1,9 +1,16 @@
-.page-footer__address {
-  font-size: 14px;
-  line-height: 1.71;
-  font-style: normal;
+.page-footer__contacts {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
 
-  margin-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 84px;
+    margin-bottom: 0px;
+  }
+}
+
+.page-footer__address {
+  @include base-font(14px, 400, 24px, 0.03em);
 }
 
 .address__text {
@@ -15,7 +22,6 @@
 
 .address__link {
   display: block;
-  text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 
   &:hover,

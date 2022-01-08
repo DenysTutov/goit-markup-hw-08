@@ -3,9 +3,13 @@
   color: $main-text-color;
 
   font-family: $secondary-font;
+  font-size: 24px;
   font-weight: 700;
-  font-size: 26px;
   line-height: 1.19;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+  }
 
   color: $accent-main-color;
 

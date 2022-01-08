@@ -1,0 +1,125 @@
+// Menu button
+.mobile-menu__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    fill: $accent-main-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu__button .mobile-menu__cross-icon {
+  display: none;
+}
+
+.mobile-menu__button.is-open .mobile-menu__cross-icon {
+  display: block;
+}
+
+.mobile-menu__button.is-open .mobile-menu__menu-icon {
+  display: none;
+}
+
+// Menu container
+.mobile-menu__menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 48px 10px 48px 40px;
+
+  width: 100%;
+  height: calc(100vh - 120px);
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  background-color: #fff;
+  z-index: 10;
+
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+// Navigation
+.mobile-menu__nav-list {
+  margin-bottom: 64px;
+}
+.mobile-menu__nav-item,
+.mobile-menu__contacts-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__nav-link {
+  @include base-font(40px, 500, 47px);
+
+  &:hover,
+  &:focus {
+    color: $accent-main-color;
+  }
+}
+
+// Menu contacts
+.mobile-menu__contacts-tel {
+  @include base-font(30px, 500, 40px);
+  color: $accent-main-color;
+}
+
+.mobile-menu__contacts-mail {
+  @include base-font(24px, 500, 28px);
+  color: $secondary-text-color;
+}
+
+.mobile-menu__contacts-list {
+  margin-bottom: 64px;
+}
+
+// Socials link
+.mobile-menu__socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-menu__socials_item {
+  &:not(:last-child)::after {
+    content: "";
+    display: inline-flex;
+
+    vertical-align: top;
+
+    width: 1px;
+    height: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.mobile-menu__socials-link {
+  @include base-font(14px, 500, 22px, 0.02em);
+  color: $accent-main-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-secondary-color;
+  }
+}

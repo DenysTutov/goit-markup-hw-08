@@ -1,24 +1,38 @@
 .portfolio__project {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+
   margin: -15px;
 }
 
 .project__card {
   margin: 15px;
-  width: calc((100% - 90px) / 3);
   background-color: $bg-color-white;
+
+  width: 450px;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .project__img {
   display: block;
+  width: 100%;
 }
 
 .project__link {
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
 
+  height: 100%;
   transition: box-shadow 250ms $bezier-timing;
 
   &:hover,
@@ -30,6 +44,7 @@
 
 .project__card-gap {
   padding: 20px 24px;
+  flex-grow: 1;
 
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -68,6 +83,7 @@
   top: 0;
   left: 0;
   padding: 63px 24px;
+  height: 100%;
 
   background-color: rgba(33, 150, 243, 0.9);
 

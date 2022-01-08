@@ -1,6 +1,11 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__list {
@@ -11,23 +16,24 @@
 }
 
 .clients__item {
-  @media screen and (max-width: 479px) {
-    width: calc((100% - 60px) / 2);
-    margin: 15px;
-  }
+  width: calc((100% - 60px) / 2);
+  height: 92px;
+  margin: 15px;
 
   @media screen and (min-width: $mobile) {
-    width: 210px;
-    height: 92px;
-    margin: 15px;
+    width: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 90px) / 3);
   }
 
   @media screen and (min-width: $desktop) {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 180px) / 6);
 
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 30px;
+    // }
   }
 }
 
