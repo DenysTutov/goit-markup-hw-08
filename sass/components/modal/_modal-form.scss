@@ -131,6 +131,7 @@
 .checkbox__accepted-text {
   @include base-font(12px, 400, 14px, 0.03em);
   color: $secondary-text-color;
+  text-align: center;
 
   @media screen and (min-width: $desktop) {
     @include base-font(14px, 400, 24px, 0.03em);
