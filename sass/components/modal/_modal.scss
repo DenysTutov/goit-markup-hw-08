@@ -5,6 +5,7 @@
 
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
 
   background-color: rgba(0, 0, 0, 0.4);
 
@@ -22,29 +23,28 @@
 }
 
 .backdrop__modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
   padding: 40px;
-
-  width: calc(100% - 30px);
   min-height: 581px;
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: $mobile) {
     width: 450px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
-    top: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $bezier-timing;
   }
 
   @media screen and (min-width: $desktop) {
     width: 528px;
   }
-
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms $bezier-timing;
 
   border-radius: 4px;
   background-color: $bg-color-white;
