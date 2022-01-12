@@ -1,10 +1,11 @@
-// Menu button
+// Mobile-menu button
 .mobile-menu__button {
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  z-index: 99;
 
   &:hover {
     fill: $accent-main-color;
@@ -27,25 +28,23 @@
   display: none;
 }
 
-// Menu container
+// Mobile-menu container
 .mobile-menu__menu-container {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 
+  width: 100vw;
+  height: 100vh;
   padding: 48px 10px 48px 40px;
-
-  width: 100%;
-  height: calc(100vh - 120px);
+  background-color: #fff;
+  z-index: 10;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
-
-  background-color: #fff;
-  z-index: 10;
 
   &.is-open {
     display: flex;
@@ -58,7 +57,7 @@
   }
 }
 
-// Navigation
+// Mobile-menu navigation
 .mobile-menu__nav-list {
   margin-bottom: 64px;
 }
@@ -78,7 +77,7 @@
   }
 }
 
-// Menu contacts
+// Mobile-menu contacts
 .mobile-menu__contacts-tel {
   @include base-font(30px, 500, 40px);
   color: $accent-main-color;
@@ -93,7 +92,7 @@
   margin-bottom: 64px;
 }
 
-// Socials link
+// Mobile-menu socials link
 .mobile-menu__socials {
   display: flex;
   flex-wrap: wrap;

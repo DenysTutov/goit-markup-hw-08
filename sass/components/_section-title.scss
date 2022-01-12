@@ -1,8 +1,11 @@
 .section-title {
+  @include base-font(28px, 700, 33px, 0.03em);
+  text-align: center;
+
   margin-bottom: 30px;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+  @media screen and (min-width: $desktop) {
+    @include base-font(36px, 700, 42px, 0.03em);
+    margin-bottom: 50px;
+  }
 }
