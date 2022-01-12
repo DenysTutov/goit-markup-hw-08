@@ -5,7 +5,7 @@
 
   width: 100%;
   height: 100%;
-  padding: 93px 15px;
+  // padding: 93px 15px;
 
   background-color: rgba(0, 0, 0, 0.4);
 
@@ -22,39 +22,81 @@
   pointer-events: none;
 }
 
+// .backdrop__modal {
+//   padding: 40px;
+//   min-height: 581px;
+//   position: relative;
+
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   transform: scale(1);
+//   transition: transform 250ms $bezier-timing;
+
+//   .backdrop.is-hidden & {
+//     transform: scale(1.1);
+//   }
+
+//   @media screen and (min-width: $mobile) {
+//     width: 450px;
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(1);
+//     transition: transform 250ms $bezier-timing;
+
+//     .backdrop.is-hidden & {
+//       transform: translate(-50%, -50%) scale(1.1);
+//     }
+//   }
+
+//   @media screen and (min-width: 600px) and (orientation: landscape) and (max-width: 915px) {
+//     top: 90%;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     width: 528px;
+//   }
+
+//   border-radius: 4px;
+//   background-color: $bg-color-white;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+// }
+
 .backdrop__modal {
   padding: 40px;
   min-height: 581px;
-  position: relative;
+  width: calc(100% - 30px);
 
-  margin-left: auto;
-  margin-right: auto;
-
-  transform: scale(1);
-  transition: transform 250ms $bezier-timing;
-
-  .backdrop.is-hidden & {
-    transform: scale(1.1);
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
   @media screen and (min-width: $mobile) {
     width: 450px;
   }
 
   @media screen and (min-width: $tablet) {
-    position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms $bezier-timing;
+  }
 
-    .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+  @media screen and (min-width: 600px) and (orientation: landscape) and (max-width: 915px) {
+    top: 90%;
   }
 
   @media screen and (min-width: $desktop) {
     width: 528px;
+  }
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $bezier-timing;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
   }
 
   border-radius: 4px;
