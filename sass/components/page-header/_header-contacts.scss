@@ -50,12 +50,7 @@
   }
 
   margin-right: 10px;
-  fill: $secondary-text-color;
 
   transition: fill 250ms $bezier-timing;
-
-  .contacts__link:hover &,
-  .contacts__link:focus & {
-    fill: $accent-main-color;
-  }
+  fill: currentColor;
 }

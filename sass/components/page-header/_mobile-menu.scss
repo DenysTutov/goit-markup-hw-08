@@ -1,11 +1,11 @@
 // Mobile-menu button
-.mobile-menu__button {
+.mobile-menu__button-open {
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
+  fill: #000;
   background-color: transparent;
-  z-index: 99;
 
   &:hover {
     fill: $accent-main-color;
@@ -16,22 +16,17 @@
   }
 }
 
-.mobile-menu__button .mobile-menu__cross-icon {
-  display: none;
-}
+.mobile-menu__cross-button {
+  @extend .mobile-menu__button-open;
 
-.mobile-menu__button.is-open .mobile-menu__cross-icon {
-  display: block;
-}
-
-.mobile-menu__button.is-open .mobile-menu__menu-icon {
-  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 // Mobile-menu container
 .mobile-menu__menu-container {
-  display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -40,31 +35,52 @@
   height: 100vh;
   padding: 48px 10px 48px 40px;
   background-color: #fff;
-  z-index: 10;
+  z-index: 5;
 
-  @media screen and (min-width: $mobile) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (min-width: $mobile) and (max-width: calc(#{$tablet} - 1px)) {
     width: $mobile;
   }
 
-  &.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 
-    @media screen and (min-width: $tablet) {
-      display: none;
-    }
+  &.is-hidden {
+    display: none;
   }
 }
 
 // Mobile-menu navigation
 .mobile-menu__nav-list {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
+
+  @media screen and (max-width: 680px) and (orientation: landscape) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
+
 .mobile-menu__nav-item,
 .mobile-menu__contacts-item {
   &:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  @media screen and (max-height: 500px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (max-width: 680px) and (orientation: landscape) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -78,6 +94,20 @@
 }
 
 // Mobile-menu contacts
+.mobile-menu__contacts-list {
+  margin-bottom: 64px;
+
+  @media screen and (max-height: 500px) and (orientation: portrait) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (max-width: 680px) and (orientation: landscape) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .mobile-menu__contacts-tel {
   @include base-font(30px, 500, 40px);
   color: $accent-main-color;
@@ -86,10 +116,6 @@
 .mobile-menu__contacts-mail {
   @include base-font(24px, 500, 28px);
   color: $secondary-text-color;
-}
-
-.mobile-menu__contacts-list {
-  margin-bottom: 64px;
 }
 
 // Mobile-menu socials link

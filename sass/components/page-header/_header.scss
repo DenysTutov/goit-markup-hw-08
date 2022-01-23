@@ -16,7 +16,9 @@
 }
 
 .page-header__logo {
-  margin-right: 88px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
 
   @media screen and (min-width: $desktop) {
     margin-right: 93px;
